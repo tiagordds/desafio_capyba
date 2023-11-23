@@ -25,7 +25,7 @@
      python manage.py migrate
      python manage.py runserver
      ```
-     O projeto pode ser acessado por meio de seu [localhost](localhost:8000) .
+     O projeto pode ser acessado por meio de seu [localhost](http://127.0.0.1:8000) .
      Para a criação de um usuário com acesso à área administrativa do django, execute o comando:
      ```
      python manage.py createsuperuser
@@ -43,7 +43,7 @@
   
   Uma pesquisa simples que procura o input em toda a base da dados de posts, tags, categorias e autores.
 
-  Através do link [register](localhost:8000/register) você pode criar usuários para testes da API.
+  Através do link [register](http://127.0.0.1:8000/register/) você pode criar usuários para testes da API.
 
 # Layout
 
