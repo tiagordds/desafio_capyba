@@ -3,11 +3,11 @@ from rest_framework.authentication import SessionAuthentication, TokenAuthentica
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
-
-from django.shortcuts import get_object_or_404
+from django.contrib import messages
+from capyba.forms import RegisterForm
+from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
-
 from .serializers import UserSerializer
 
 
@@ -39,3 +39,23 @@ def login(request):
 @permission_classes([IsAuthenticated])
 def test_token(request):
     return Response("passed for {}". format(request.user.email))
+
+
+def register(request):
+    form = RegisterForm()
+
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            messages.info(request, 'Usuário criado com sucesso.')
+            return redirect('blog:index')
+
+    return render(
+        request,
+        'capyba/register.html',
+        {
+            'form': form
+        }
+    )

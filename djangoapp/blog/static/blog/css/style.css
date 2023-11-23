@@ -482,3 +482,15 @@ html,
 .card-action-link:hover {
   text-decoration: none;
 }
+
+.register_login {
+  display: block;
+  align-items: center;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.message_ {
+  background-color: rgba(0, 0, 255, 0.3);
+  border: 1px solid rgba(0, 0, 255, 0.3);
+}
