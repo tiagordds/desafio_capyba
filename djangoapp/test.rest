@@ -1,17 +1,17 @@
 POST http://127.0.0.1:8000/signup 
 Content-Type: application/json
 
-{ "username": "neiva", "password": "j7m!jo[68HV%", "email": "neiva@gmail.com" }
+{ "username": "teste", "password": "<<1{z;Y5r71f", "email": "teste@gmail.com" }
 
 ###
 
 POST http://127.0.0.1:8000/login 
 Content-Type: application/json
 
-{ "username": "neiva", "password": "j7m!jo[68HV%" }
+{ "username": "teste", "password": "<<1{z;Y5r71f" }
 
 ###
 
 GET http://127.0.0.1:8000/test_token 
 Content-Type: application/json
-Authorization: Token 196f33f429f754677f96ac959df160e10258b9b8
+Authorization: Token 76ca4035174084fa2dfdebaea18adaff364e0e3f
