@@ -14,10 +14,12 @@
         {% else %}
         <div class='not-found center'>
           <h1>Nenhum post encontrado.</h1>
-          <p>Por favor, tente outra pesquisa ou acesse a nossa 
-            <a href="{% url "blog:index" %}">Home</a></p>
+          <p>Por favor, tente outra pesquisa ou acesse a nossa
+            <a href="{% url "blog:index" %}">Home</a><br>
+            Caso este seja o seu primeiro acesso, clique <a href="http://127.0.0.1:8000/admin/">aqui</a><br>
+          para ter acesso a área administrativa.</p>
         </div>
-        {% endif %}
+          {% endif %}
       </div>
     </div>
   </main>

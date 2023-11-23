@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'capyba',
     'site_setup',
     'rest_framework',
+    'rest_framework.authtoken',
     'django_summernote',
 ]
 
